@@ -1,5 +1,4 @@
-
-const Data = [
+export const Data = [
 
     {
         id: 1,
@@ -49,7 +48,6 @@ const Data = [
         Category: 'Inspiration',
         img: 'https://www.pillarstack.com/_next/image?url=https%3A%2F%2Fimages.ctfassets.net%2Ffwy0yv14lkat%2F37RaH7pTST9LOiUB0HXdXI%2Fa78e32c4903366fd0541f56280464ed8%2Fawwwards.webp&w=828&q=75'
     },
-  
     {
         id: 7,
         title: 'Blender',
@@ -74,7 +72,6 @@ const Data = [
         Category: 'Inspiration',
         img: 'https://www.pillarstack.com/_next/image?url=https%3A%2F%2Fimages.ctfassets.net%2Ffwy0yv14lkat%2F1bVTuhsyWy6LfkkArvglcQ%2F20b38e0e3f5813eb47310c60c1235a7d%2Fdarkmodedesign.webp&w=828&q=75'
     },
-  
     {
         id: 10,
         title: 'Domestika',
