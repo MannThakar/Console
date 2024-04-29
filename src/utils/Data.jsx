@@ -168,22 +168,7 @@ export const Data = [
         Category: 'YT Channels',
         img: 'https://www.pillarstack.com/_next/image?url=https%3A%2F%2Fimages.ctfassets.net%2Ffwy0yv14lkat%2F3lteRUtHIwxJtP3yNSm5Xp%2F3372f34104bedbd25070106cfeb3f827%2Ffluxacademy.webp&w=828&q=75'
     },
-    {
-        id: 12,
-        title: '',
-        description: "",
-        link: '',
-        Category: '',
-        img: ''
-    },
-    {
-        id: 12,
-        title: '',
-        description: "",
-        link: '',
-        Category: '',
-        img: ''
-    },
+    
 
 
 ]

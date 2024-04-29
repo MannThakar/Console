@@ -16,7 +16,8 @@ export default {
       },
       container: {
         center: true,
-        padding: "1rem",
+        padding: "0.3rem",
+        maxWidth: "1400px", // Adjust the width as per your requirement
         screens: {
           xs: "540px",
           sm: "720px",
@@ -30,7 +31,7 @@ export default {
         'panchang': ['Panchang', 'sans-serif'],
         'satoshi': ['Satoshi', 'sans-serif'],
         'author': ['Author', 'sans-serif']
-        
+
 
       },
       animation: {

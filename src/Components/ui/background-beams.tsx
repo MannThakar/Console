@@ -65,7 +65,7 @@ export const BackgroundBeams = React.memo(
         )}
       >
         <svg
-          className=" z-0 h-full w-full pointer-events-none absolute "
+          className="absolute z-0 w-full h-full pointer-events-none "
           width="100%"
           height="100%"
           viewBox="0 0 696 316"
@@ -78,7 +78,7 @@ export const BackgroundBeams = React.memo(
             strokeOpacity="0.05"
             strokeWidth="0.5"
           ></path>
-
+ 
           {paths.map((path, index) => (
             <motion.path
               key={`path-` + index}
@@ -112,13 +112,13 @@ export const BackgroundBeams = React.memo(
                   delay: Math.random() * 10,
                 }}
               >
-                <stop stopColor="#161616" stopOpacity="0"></stop>
-                <stop stopColor="#161616"></stop>
-                <stop offset="32.5%" stopColor="#3828A4"></stop>
-                <stop offset="100%" stopColor="#7A5AFA" stopOpacity="0"></stop>
+                <stop stopColor="#18CCFC" stopOpacity="0"></stop>
+                <stop stopColor="#18CCFC"></stop>
+                <stop offset="32.5%" stopColor="#6344F5"></stop>
+                <stop offset="100%" stopColor="#AE48FF" stopOpacity="0"></stop>
               </motion.linearGradient>
             ))}
-
+ 
             <radialGradient
               id="paint0_radial_242_278"
               cx="0"
@@ -127,9 +127,9 @@ export const BackgroundBeams = React.memo(
               gradientUnits="userSpaceOnUse"
               gradientTransform="translate(352 34) rotate(90) scale(555 1560.62)"
             >
-              <stop offset="0.0666667" stopColor="var(--neutral-700)"></stop>
-              <stop offset="0.243243" stopColor="var(--neutral-700)"></stop>
-              <stop offset="0.43594" stopColor="black" stopOpacity="0"></stop>
+              <stop offset="0.0666667" stopColor="var(--neutral-300)"></stop>
+              <stop offset="0.243243" stopColor="var(--neutral-300)"></stop>
+              <stop offset="0.43594" stopColor="white" stopOpacity="0"></stop>
             </radialGradient>
           </defs>
         </svg>
@@ -137,5 +137,3 @@ export const BackgroundBeams = React.memo(
     );
   }
 );
-
-BackgroundBeams.displayName = "BackgroundBeams";
