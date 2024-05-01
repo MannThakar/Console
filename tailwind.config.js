@@ -16,7 +16,7 @@ export default {
       },
       container: {
         center: true,
-        padding: "0.3rem",
+        padding: "0.2rem",
         maxWidth: "1400px", // Adjust the width as per your requirement
         screens: {
           xs: "540px",

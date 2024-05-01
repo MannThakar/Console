@@ -9,13 +9,13 @@ const Card = ({ title, description, link, Category, img }) => {
         <>
             <div className="containers">
                 <div className="box">
-                <img src={img} alt="" className='cardImg' />
-                
-                <div className='cardBody'>
-                    <p className="heading">{title}</p>
-                    <p>Powered By</p>
-                    <button className='Category'>{Category}</button>
-                </div>
+                    <img src={img} alt="" className='cardImg' />
+
+                    <div className='cardBody'>
+                        <p className="heading">{title}</p>
+                        <p>Powered By</p>
+                        <button className='Category'>{Category}</button>
+                    </div>
                 </div>
             </div>
 

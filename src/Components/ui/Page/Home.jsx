@@ -5,7 +5,7 @@ import Card from './Card'
 import { Data } from '../../../utils/Data'
 import { useEffect, useState } from 'react'
 import { Navigate, useNavigate } from 'react-router-dom'
-
+import Nav from './Nav'
 
 
 
@@ -37,9 +37,9 @@ const Home = () => {
     console.log(Datas);
   }
 
-  function librariesData() {
+  function UpskillingData() {
     const tools = Data.filter((item) => {
-      return item.Category === 'Libraries'
+      return item.Category === 'Upskilling'
     })
     setData(tools);
     console.log(Datas);
@@ -57,7 +57,7 @@ const Home = () => {
 
   function youtubeData() {
     const tools = Data.filter((item) => {
-      return item.Category === 'Youtube'
+      return item.Category === 'YT Channels'
     })
     setData(tools);
     console.log(Datas);
@@ -75,9 +75,9 @@ const Home = () => {
     console.log(Datas);
   }
   return (
-
+    
     <div className='bg-neutral-950'>
-      
+    <Nav></Nav>  
       <div className='container '>
         <div className='flex flex-col items-center'>
           <h1 className='w-4/6 mt-16 font-bold text-center text-white text-7xl font-author text-bold '>Your One-Stop Shop for Front-End <span className='text-primary-500'>Awesomeness.</span></h1>
@@ -90,7 +90,7 @@ const Home = () => {
             <div className='text-2xl hover:bg-primary-500 hover:px-1 hover:rounded-sm' onClick={allData}>All</div>
             <div className='text-2xl hover:bg-primary-500 hover:px-1 hover:rounded-sm' onClick={toolsData}>Tools</div>
             <div className='text-2xl hover:bg-primary-500 hover:px-1 hover:rounded-sm' onClick={typographyData}>Typography</div>
-            <div className='text-2xl hover:bg-primary-500 hover:px-1 hover:rounded-sm' onClick={librariesData}>Libraries</div>
+            <div className='text-2xl hover:bg-primary-500 hover:px-1 hover:rounded-sm' onClick={UpskillingData}>Upskilling</div>
             <div className='text-2xl hover:bg-primary-500 hover:px-1 hover:rounded-sm' onClick={inspirationData}>Inspiration</div>
             <div className='text-2xl hover:bg-primary-500 hover:px-1 hover:rounded-sm' onClick={youtubeData}>Youtube</div>
             <div className='text-2xl hover:bg-primary-500 hover:px-1 hover:rounded-sm' onClick={technologiesData}>Technologies</div>
