@@ -16,14 +16,14 @@ export default {
       },
       container: {
         center: true,
-        padding: "0.2rem",
-        maxWidth: "1400px", // Adjust the width as per your requirement
+        padding: "1rem",
+        maxWidth: "1600px", // Adjust the width as per your requirement
         screens: {
           xs: "540px",
           sm: "720px",
           md: "960px",
-          lg: "1140px",
-          xl: "1200px",
+          lg: "1400px",
+          xl: "1600px",
         },
       },
       fontFamily: {

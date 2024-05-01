@@ -75,9 +75,9 @@ const Home = () => {
     console.log(Datas);
   }
   return (
-    
+
     <div className='bg-neutral-950'>
-    <Nav></Nav>  
+      <Nav></Nav>
       <div className='container '>
         <div className='flex flex-col items-center'>
           <h1 className='w-4/6 mt-16 font-bold text-center text-white text-7xl font-author text-bold '>Your One-Stop Shop for Front-End <span className='text-primary-500'>Awesomeness.</span></h1>
@@ -85,15 +85,15 @@ const Home = () => {
         </div>
 
         <div className='flex justify-center mt-14 font-satoshi'>
-          <div className='flex justify-center gap-8 p-2 px-8 font-medium text-white bg-black rounded-md '>
+          <div className='flex justify-center gap-8 p-2 px-8 font-medium text-white bg-black rounded-md cursor-pointer '>
 
-            <div className='text-2xl hover:bg-primary-500 hover:px-1 hover:rounded-sm' onClick={allData}>All</div>
-            <div className='text-2xl hover:bg-primary-500 hover:px-1 hover:rounded-sm' onClick={toolsData}>Tools</div>
-            <div className='text-2xl hover:bg-primary-500 hover:px-1 hover:rounded-sm' onClick={typographyData}>Typography</div>
-            <div className='text-2xl hover:bg-primary-500 hover:px-1 hover:rounded-sm' onClick={UpskillingData}>Upskilling</div>
-            <div className='text-2xl hover:bg-primary-500 hover:px-1 hover:rounded-sm' onClick={inspirationData}>Inspiration</div>
-            <div className='text-2xl hover:bg-primary-500 hover:px-1 hover:rounded-sm' onClick={youtubeData}>Youtube</div>
-            <div className='text-2xl hover:bg-primary-500 hover:px-1 hover:rounded-sm' onClick={technologiesData}>Technologies</div>
+            <div className='text-2xl hover:bg-primary-500 hover:rounded-sm hover:w-1/4' onClick={allData}>All</div>
+            <div className='text-2xl hover:bg-primary-500 hover:rounded-sm hover:w-1/4' onClick={toolsData}>Tools</div>
+            <div className='text-2xl hover:bg-primary-500 hover:rounded-sm hover:w-1/4' onClick={typographyData}>Typography</div>
+            <div className='text-2xl hover:bg-primary-500 hover:rounded-sm hover:w-1/4' onClick={UpskillingData}>Upskilling</div>
+            <div className='text-2xl hover:bg-primary-500 hover:rounded-sm hover:w-1/4' onClick={inspirationData}>Inspiration</div>
+            <div className='text-2xl hover:bg-primary-500 hover:rounded-sm hover:w-1/4' onClick={youtubeData}>Youtube</div>
+            <div className='text-2xl hover:bg-primary-500 hover:rounded-sm hover:w-1/4' onClick={technologiesData}>Technologies</div>
           </div>
         </div>
 

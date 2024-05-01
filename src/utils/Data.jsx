@@ -7,6 +7,7 @@ export const Data = [
     link: "https://ui.aceternity.com/",
     Category: "Tools",
     img: "https://www.pillarstack.com/_next/image?url=https%3A%2F%2Fimages.ctfassets.net%2Ffwy0yv14lkat%2F4bXCDHmsQuvlwEQk1lhidd%2Fd70e04598626deb9e13dd4bae88b8989%2FAceternity.webp&w=828&q=75",
+    
   },
   {
     id: 2,
