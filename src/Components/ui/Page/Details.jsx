@@ -23,8 +23,12 @@ const Details = () => {
                             <div className="flex flex-col justify-center gap-4 pl-6 rounded-lg h-5/6 ">
                                 <h2 className="text-4xl font-bold ">{name}</h2>
                                 <p className="text-xl ">{description}</p>
-                                <button className="shadow__btn">View Source
-                                </button>
+                                <a href={link} >
+                                    <button className="shadow__btn">
+                                        View Source
+
+                                    </button>
+                                </a>
 
                                 <div className="p-2 border-white border-y-2">
                                     <p className="text-xl">Category: {Category}</p>
