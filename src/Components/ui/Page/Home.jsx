@@ -123,7 +123,7 @@ const Home = () => {
             })
           }
         </section>
-        {/* <BackgroundBeams /> */}
+        <BackgroundBeams />
       </div>
     </div>
   )
