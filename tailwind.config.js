@@ -13,6 +13,11 @@ export default {
         primary: {
           500: "#FF5403"
         },
+        button :
+        {
+          500: "#E1DCD0"
+        },
+        
       },
       container: {
         center: true,

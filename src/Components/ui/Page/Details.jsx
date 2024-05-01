@@ -1,6 +1,6 @@
 import { useLocation } from "react-router-dom";
 import Nav from "../Page/Nav";
-import { ArrowLeft } from 'lucide-react';
+import { ArrowLeft,MoveRight } from 'lucide-react';
 import { useNavigate } from 'react-router-dom'
 
 const Details = () => {
@@ -30,13 +30,13 @@ const Details = () => {
                                 <h2 className="mt-20 text-4xl font-bold">{name}</h2>
                                 <p className="text-2xl ">{description}</p>
                                 <a href={link} >
-                                    <button className=" bg-stone-300">
-                                        View Source
+                                    <button className="flex items-center justify-center gap-2 text-xl text-black rounded-md bg-button-500 h-14 w-52">
+                                        View Source <MoveRight/>
                                     </button>
                                 </a>
 
-                                <div className="p-2 border-white border-y-2">
-                                    <p className="text-xl">Category: {Category}</p>
+                                <div className="p-2 mt-5 border-white border-y-2">
+                                    <p className="text-xl font-semibold">Category: {Category}</p>
 
                                 </div>
                             </div>

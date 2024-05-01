@@ -7,7 +7,7 @@ export const Data = [
     link: "https://ui.aceternity.com/",
     Category: "Tools",
     img: "https://www.pillarstack.com/_next/image?url=https%3A%2F%2Fimages.ctfassets.net%2Ffwy0yv14lkat%2F4bXCDHmsQuvlwEQk1lhidd%2Fd70e04598626deb9e13dd4bae88b8989%2FAceternity.webp&w=828&q=75",
-    
+
   },
   {
     id: 2,
@@ -593,7 +593,7 @@ export const Data = [
       "Create custom, responsive websites with the power of code — visually. Design and build your site with a flexible CMS and top-tier hosting.",
     link: "https://webflow.com/",
     Category:
-      "Create custom, responsive websites with the power of code — visually. Design and build your site with a flexible CMS and top-tier hosting.",
+      "Technologies",
     img: "https://www.pillarstack.com/_next/image?url=https%3A%2F%2Fimages.ctfassets.net%2Ffwy0yv14lkat%2F4DfZEztnolgD0qDuksAiD%2F4870dad7ab833eb5a60512af533881d8%2Fwebflow.webp&w=1920&q=75",
   },
 ];

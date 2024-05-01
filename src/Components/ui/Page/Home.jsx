@@ -97,6 +97,7 @@ const Home = () => {
           </div>
         </div>
 
+
         <section className='flex flex-wrap justify-center gap-5'>
 
           {
@@ -123,7 +124,7 @@ const Home = () => {
             })
           }
         </section>
-        <BackgroundBeams />
+        {/* <BackgroundBeams /> */}
       </div>
     </div>
   )
