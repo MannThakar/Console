@@ -187,7 +187,7 @@ const Home = () => {
         </nav>
         </div> */}
 
-          <section className="flex flex-wrap justify-center gap-5">
+          <section className="grid md:grid-cols-4 grid-cols-2">
             {Datas?.map((item) => {
               return (
                 <>
