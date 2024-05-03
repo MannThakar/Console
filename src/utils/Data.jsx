@@ -86,7 +86,7 @@ export const Data = [
     description:
       "Domestika is the largest creative community. Learn and share from anywhere with online courses taught by the best professionals in the world of design and creativity.",
     link: "https://www.domestika.org/",
-    Category: "IUpskilling",
+    Category: "Upskilling",
     img: "https://www.pillarstack.com/_next/image?url=https%3A%2F%2Fimages.ctfassets.net%2Ffwy0yv14lkat%2F70u1tcTs2v9gGKiD0HXrjg%2Fb8498eea8c9080bfde57a061bbdf2774%2Fdomestika.webp&w=828&q=75",
   },
   {
@@ -596,4 +596,11 @@ export const Data = [
       "Technologies",
     img: "https://www.pillarstack.com/_next/image?url=https%3A%2F%2Fimages.ctfassets.net%2Ffwy0yv14lkat%2F4DfZEztnolgD0qDuksAiD%2F4870dad7ab833eb5a60512af533881d8%2Fwebflow.webp&w=1920&q=75",
   },
+  {
+    id: 68,
+    title: "Material ui",
+    link :"https://materialui.co/",
+    Category: "Tools",
+    img : "https://materialui.co/img/logo.svg",
+  }
 ];

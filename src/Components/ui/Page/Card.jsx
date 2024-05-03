@@ -14,7 +14,7 @@ const Card = ({ title, description, link, Category, img }) => {
                     </div>
 
                     <div className='h-24 p-2 pl-5'>
-                        <h2 className='text-xl text-white text-bold'>{title}</h2>
+                        <h2 className='text-2xl text-white font-basesemibold'>{title}</h2>
                         <button className='px-3 mt-4 text-lg text-black bg-white rounded-full font-basesemibold'>{Category}</button>
                     </div>
 

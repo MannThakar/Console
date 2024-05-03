@@ -17,6 +17,10 @@ export default {
         {
           500: "#E1DCD0"
         },
+        textbg : 
+        {
+          500 : "#878787"
+        }
         
       },
       container: {

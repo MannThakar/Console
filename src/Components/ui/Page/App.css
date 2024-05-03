@@ -66,6 +66,105 @@
 
 .shadow__btn {
     background: rgb(255, 84, 3);
-    
+
 }
 
+nav {
+    position: relative;
+    background: #34495e;
+    border-radius: 8px;
+}
+
+nav a {
+    /*     font-size: 15px; */
+    /*     text-transform: uppercase; */
+    color: white;
+    text-decoration: none;
+    line-height: 50px;
+    position: relative;
+    z-index: 1;
+    display: inline-block;
+    text-align: center;
+}
+
+nav .animation {
+    position: absolute;
+    height: 100%;
+    top: 0;
+    z-index: 0;
+    background: #FF5403;
+    border-radius: 8px;
+    transition: all .3s ease 0s;
+
+}
+
+nav a:nth-child(1) {
+    width: 100px;
+}
+
+nav .start-home,
+a:nth-child(1):hover~.animation {
+    width: 120px;
+    left: 0;
+}
+
+nav a:nth-child(2) {
+    width: 120px;
+}
+
+nav a:nth-child(2):hover~.animation {
+    width: 110px;
+    left: 100px;
+}
+
+nav a:nth-child(3) {
+    width: 100px;
+}
+
+nav a:nth-child(3):hover~.animation {
+    width: 120px;
+    left: 210px;
+}
+
+nav a:nth-child(4) {
+    width: 110px;
+}
+
+nav a:nth-child(4):hover~.animation {
+    width: 120px;
+    left: 320px;
+}
+
+nav a:nth-child(5) {
+    width: 120px;
+}
+
+nav a:nth-child(5):hover~.animation {
+
+    width: 120px;
+    left: 430px;
+}
+
+nav a:nth-child(6) {
+    width: 120px;
+}
+
+nav a:nth-child(6):hover~.animation {
+
+    width: 110px;
+    left: 550px;
+}
+
+nav a:nth-child(7) {
+    width: 140px;
+}
+
+nav a:nth-child(7):hover~.animation {
+
+    width: 150px;
+    left: 670px;
+}
+
+a {
+    margin-left: 10px;
+}
