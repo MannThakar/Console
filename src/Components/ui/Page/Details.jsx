@@ -1,5 +1,4 @@
 import { useLocation } from "react-router-dom";
-import Nav from "../Page/Nav";
 import { ArrowLeft,MoveRight } from 'lucide-react';
 import { useNavigate } from 'react-router-dom'
 
@@ -13,7 +12,6 @@ const Details = () => {
         <>
 
             <div className="p-1 bg-neutral-950">
-                <Nav />
                 <div className="container">
                     <div className="flex mb-8 mt-11" >
                         <button className="flex gap-1 p-4 px-8 text-base text-white" onClick={() => navigate("/")}> <ArrowLeft /> Back</button>

@@ -9,14 +9,11 @@ import Nav from "./Nav";
 import { ReactLenis, useLenis } from 'lenis/react'
 
 const Home = () => {
-  const [limit, setLimit] = useState(() => {
-
-    return 10
-  });
+  const navigate = useNavigate();
+  const [limit, setLimit] = useState(10);
   const [Datas, setData] = useState(Data);
   const [visible, setVisible] = useState(false);
   const [dataDublicate, setDataDublicate] = useState(Data.slice(0, limit));
-  const navigate = useNavigate();
 
   useEffect(() => {
     allData();
@@ -83,7 +80,7 @@ const Home = () => {
   return (
     <div className="bg-neutral-950">
       <ReactLenis root>
-        <Nav></Nav>
+      
         <div className="container">
           <div className="flex flex-col items-center">
             <h1 className="mt-16 text-4xl font-bold text-center text-white md:w-3/5 md:text-7xl font-author text-bold">
