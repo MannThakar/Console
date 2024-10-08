@@ -6,7 +6,7 @@ import { Data } from "../../../utils/Data";
 import { useEffect, useState } from "react";
 import { Navigate, useNavigate } from "react-router-dom";
 import Nav from "./Nav";
-import { ReactLenis, useLenis } from 'lenis/react'
+import { ReactLenis, useLenis } from "lenis/react";
 
 const Home = () => {
   const navigate = useNavigate();
@@ -72,15 +72,11 @@ const Home = () => {
   }
   const lenis = useLenis(({ scroll }) => {
     // called every scroll
-  })
-
-
-
+  });
 
   return (
     <div className="bg-neutral-950">
       <ReactLenis root>
-      
         <div className="container">
           <div className="flex flex-col items-center">
             <h1 className="mt-16 text-4xl font-bold text-center text-white md:w-3/5 md:text-7xl font-author text-bold">
@@ -208,7 +204,6 @@ const Home = () => {
                 </>
               );
             })}
-
           </section>
 
           {/* <div className="flex justify-center">
@@ -222,7 +217,6 @@ const Home = () => {
               Show More
             </button>
           </div> */}
-
 
           {/* <BackgroundBeams /> */}
         </div>
