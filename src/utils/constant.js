@@ -1,4 +1,4 @@
-export const Data = [
+export const CARD_DATA = [
   {
     id: 1,
     title: "Aceternity UI",
@@ -7,7 +7,6 @@ export const Data = [
     link: "https://ui.aceternity.com/",
     Category: "Tools",
     img: "https://www.pillarstack.com/_next/image?url=https%3A%2F%2Fimages.ctfassets.net%2Ffwy0yv14lkat%2F4bXCDHmsQuvlwEQk1lhidd%2Fd70e04598626deb9e13dd4bae88b8989%2FAceternity.webp&w=828&q=75",
-
   },
   {
     id: 2,
@@ -80,7 +79,7 @@ export const Data = [
     Category: "Inspiration",
     img: "https://www.pillarstack.com/_next/image?url=https%3A%2F%2Fimages.ctfassets.net%2Ffwy0yv14lkat%2F1bVTuhsyWy6LfkkArvglcQ%2F20b38e0e3f5813eb47310c60c1235a7d%2Fdarkmodedesign.webp&w=828&q=75",
   },
-  
+
   {
     id: 12,
     title: "Arnau Ros",
@@ -89,7 +88,6 @@ export const Data = [
     Category: "YT Channels",
     img: "https://www.pillarstack.com/_next/image?url=https%3A%2F%2Fimages.ctfassets.net%2Ffwy0yv14lkat%2F7mtY4vM3kIOFW7JkS1Uj4W%2Fe53a14ea65a1a3a01dda1e59694aa60c%2Farnau.webp&w=828&q=75",
   },
- 
 
   {
     id: 15,
@@ -551,15 +549,14 @@ export const Data = [
     description:
       "Create custom, responsive websites with the power of code — visually. Design and build your site with a flexible CMS and top-tier hosting.",
     link: "https://webflow.com/",
-    Category:
-      "Technologies",
+    Category: "Technologies",
     img: "https://www.pillarstack.com/_next/image?url=https%3A%2F%2Fimages.ctfassets.net%2Ffwy0yv14lkat%2F4DfZEztnolgD0qDuksAiD%2F4870dad7ab833eb5a60512af533881d8%2Fwebflow.webp&w=1920&q=75",
   },
   {
     id: 68,
     title: "Material ui",
-    link :"https://materialui.co/",
+    link: "https://materialui.co/",
     Category: "Tools",
-    img : "https://materialui.co/img/logo.svg",
-  }
+    img: "https://materialui.co/img/logo.svg",
+  },
 ];

@@ -1,74 +1,63 @@
 /* eslint-disable no-unused-vars */
 
-import { BackgroundBeams } from "../background-beams";
-import Card from "./Card";
-import { Data } from "../../../utils/Data";
+import Card from "../components/common/Card";
+import { CARD_DATA } from "../utils/constant";
 import { useEffect, useState } from "react";
-import { Navigate, useNavigate } from "react-router-dom";
-import Nav from "./Nav";
+import { useNavigate } from "react-router-dom";
 import { ReactLenis, useLenis } from "lenis/react";
 
 const Home = () => {
   const navigate = useNavigate();
-  const [limit, setLimit] = useState(10);
-  const [Datas, setData] = useState(Data);
-  const [visible, setVisible] = useState(false);
-  const [dataDublicate, setDataDublicate] = useState(Data.slice(0, limit));
+
+  const [data, setData] = useState(CARD_DATA);
 
   useEffect(() => {
     allData();
   }, []);
 
   function toolsData() {
-    const tools = Data.filter((item) => {
+    const tools = CARD_DATA.filter((item) => {
       return item.Category === "Tools";
     });
 
     setData(tools);
-    console.log(Datas);
   }
   function typographyData() {
-    const tools = Data.filter((item) => {
+    const tools = CARD_DATA.filter((item) => {
       return item.Category === "Typography";
     });
     setData(tools);
-    console.log(Datas);
   }
 
   function UpskillingData() {
-    const tools = Data.filter((item) => {
+    const tools = CARD_DATA.filter((item) => {
       return item.Category === "Upskilling";
     });
     setData(tools);
-    console.log(Datas);
   }
 
   function inspirationData() {
-    const tools = Data.filter((item) => {
+    const tools = CARD_DATA.filter((item) => {
       return item.Category === "Inspiration";
     });
     setData(tools);
-    console.log(Datas);
   }
 
   function youtubeData() {
-    const tools = Data.filter((item) => {
+    const tools = CARD_DATA.filter((item) => {
       return item.Category === "YT Channels";
     });
     setData(tools);
-    console.log(Datas);
   }
 
   function technologiesData() {
-    const tools = Data.filter((item) => {
+    const tools = CARD_DATA.filter((item) => {
       return item.Category === "Technologies";
     });
     setData(tools);
-    console.log(Datas);
   }
   function allData() {
-    // console.log(Datas);
-    setData(Data);
+    setData(CARD_DATA);
   }
   const lenis = useLenis(({ scroll }) => {
     // called every scroll
@@ -180,23 +169,24 @@ const Home = () => {
         </nav>
         </div> */}
 
-          <section className="grid md:grid-cols-4 grid-cols-2">
-            {Datas?.map((item) => {
+          <section className="grid md:grid-cols-3 grid-cols-2 lg:grid-cols-5 lg:gap-2">
+            {data?.map((item) => {
               return (
                 <>
                   <div
                     className="mt-5 "
                     key={item.id}
                     onClick={() => {
-                      const data = {
+                      const navigationData = {
                         name: item.title,
                         description: item.description,
                         link: item.link,
                         img: item.img,
                         Category: item.Category,
                         id: item.id,
+                        isFromHome: true,
                       };
-                      navigate("/details", { state: data });
+                      navigate("/details", { state: navigationData });
                     }}
                   >
                     <Card {...item} />
@@ -205,20 +195,6 @@ const Home = () => {
               );
             })}
           </section>
-
-          {/* <div className="flex justify-center">
-            <button
-              onClick={() => {
-                setLimit(limit + 10);
-                setDataDublicate(Datas.slice(0, limit + 10));
-              }}
-              className="p-4 text-black bg-white rounded-full font-xs"
-            >
-              Show More
-            </button>
-          </div> */}
-
-          {/* <BackgroundBeams /> */}
         </div>
       </ReactLenis>
     </div>
