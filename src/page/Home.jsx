@@ -1,7 +1,7 @@
 /* eslint-disable no-unused-vars */
 
 import Card from "../components/common/Card";
-import { CARD_DATA } from "../utils/constant";
+import { CARD_DATA, COLUMN_DATA } from "../utils/constant";
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { ReactLenis, useLenis } from "lenis/react";
@@ -10,55 +10,47 @@ const Home = () => {
   const navigate = useNavigate();
 
   const [data, setData] = useState(CARD_DATA);
+  const [active, setActive] = useState("All");
 
-  useEffect(() => {
-    allData();
-  }, []);
+  const filteredData = (filterItem) => {
+    switch (filterItem) {
+      case "Tools":
+        setData(CARD_DATA.filter((item) => item.Category === "Tools"));
+        setActive(filterItem);
+        break;
 
-  function toolsData() {
-    const tools = CARD_DATA.filter((item) => {
-      return item.Category === "Tools";
-    });
+      case "Typography":
+        setData(CARD_DATA.filter((item) => item.Category === "Typography"));
+        setActive(filterItem);
+        break;
 
-    setData(tools);
-  }
-  function typographyData() {
-    const tools = CARD_DATA.filter((item) => {
-      return item.Category === "Typography";
-    });
-    setData(tools);
-  }
+      case "Upskilling":
+        setData(CARD_DATA.filter((item) => item.Category === "Upskilling"));
+        setActive(filterItem);
+        break;
 
-  function UpskillingData() {
-    const tools = CARD_DATA.filter((item) => {
-      return item.Category === "Upskilling";
-    });
-    setData(tools);
-  }
+      case "Inspiration":
+        setData(CARD_DATA.filter((item) => item.Category === "Inspiration"));
+        setActive(filterItem);
+        break;
 
-  function inspirationData() {
-    const tools = CARD_DATA.filter((item) => {
-      return item.Category === "Inspiration";
-    });
-    setData(tools);
-  }
+      case "Youtube":
+        setData(CARD_DATA.filter((item) => item.Category === "YT Channels"));
+        setActive(filterItem);
+        break;
 
-  function youtubeData() {
-    const tools = CARD_DATA.filter((item) => {
-      return item.Category === "YT Channels";
-    });
-    setData(tools);
-  }
+      case "Technologies":
+        setData(CARD_DATA.filter((item) => item.Category === "Technologies"));
+        setActive(filterItem);
+        break;
 
-  function technologiesData() {
-    const tools = CARD_DATA.filter((item) => {
-      return item.Category === "Technologies";
-    });
-    setData(tools);
-  }
-  function allData() {
-    setData(CARD_DATA);
-  }
+      case "All":
+        setData(CARD_DATA);
+        setActive(filterItem);
+        break;
+    }
+  };
+
   const lenis = useLenis(({ scroll }) => {
     // called every scroll
   });
@@ -78,98 +70,30 @@ const Home = () => {
             </h4>
           </div>
 
-          <div className="flex mt-24 overflow-auto md:justify-center font-satoshi">
-            <div className="flex justify-center h-full gap-8 p-2 px-8 font-medium text-white bg-gray-400 rounded-md cursor-pointer bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-10">
-              <div
-                className="text-2xl hover:bg-primary-500 hover:rounded-sm hover:w-1/4"
-                onClick={allData}
+          <div
+            role="tablist"
+            className=" mt-24 font-satoshi tabs tabs-boxed bg-gray-400 rounded-md cursor-pointer bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-10 sm:tabs-sm lg:tabs-lg xs:tabs-xs overflow-auto md:w-10/12 mx-auto"
+          >
+            {COLUMN_DATA.map((item) => (
+              <a
+                role="tab"
+                className={`tab text-white md:text-2xl ${
+                  active === item.title ? "tab-active" : ""
+                }`}
+                key={item.id}
+                onClick={() => filteredData(item.title)}
+                style={
+                  active === item.title
+                    ? { backgroundColor: "#FF5403", color: "white" }
+                    : {}
+                }
               >
-                All
-              </div>
-              <div
-                className="text-2xl hover:bg-primary-500 hover:rounded-sm hover:w-1/4"
-                onClick={toolsData}
-              >
-                Tools
-              </div>
-              <div
-                className="text-2xl hover:bg-primary-500 hover:rounded-sm hover:w-1/4"
-                onClick={typographyData}
-              >
-                Typography
-              </div>
-              <div
-                className="text-2xl hover:bg-primary-500 hover:rounded-sm hover:w-1/4"
-                onClick={UpskillingData}
-              >
-                Upskilling
-              </div>
-              <div
-                className="text-2xl hover:bg-primary-500 hover:rounded-sm hover:w-1/4"
-                onClick={inspirationData}
-              >
-                Inspiration
-              </div>
-              <div
-                className="text-2xl hover:bg-primary-500 hover:rounded-sm hover:w-1/4"
-                onClick={youtubeData}
-              >
-                Youtube
-              </div>
-              <div
-                className="text-2xl hover:bg-primary-500 hover:rounded-sm hover:w-1/4"
-                onClick={technologiesData}
-              >
-                Technologies
-              </div>
-            </div>
+                {item.title}
+              </a>
+            ))}
           </div>
-          {/* <div className="flex justify-center">
-        <nav >
-          <div className="font-satoshi">
-            <div className="cursor-pointer ">
-              <a>
-                <div className="pt-2 text-xl" onClick={allData}>
-                  All
-                </div>
-              </a>
-              <a>
-                <div className="text-xl" onClick={toolsData}>
-                  Tools
-                </div>
-              </a>
-              <a>
-                <div className="text-xl" onClick={typographyData}>
-                  Typography
-                </div>
-              </a>
-              <a>
-                <div className="text-xl" onClick={UpskillingData}>
-                  Upskilling
-                </div>
-              </a>
-              <a>
-                <div className="text-xl" onClick={inspirationData}>
-                  Inspiration
-                </div>
-              </a>
-              <a>
-                <div className="text-xl" onClick={youtubeData}>
-                  Youtube
-                </div>
-              </a>
-              <a>
-                <div className="text-xl" onClick={technologiesData}>
-                  Technologies
-                </div>
-              </a>
-              <div className="animation start-home"></div>
-            </div>
-          </div>
-        </nav>
-        </div> */}
 
-          <section className="grid md:grid-cols-3 grid-cols-2 lg:grid-cols-5 lg:gap-2">
+          <section className="grid md:grid-cols-3 grid-cols-2 lg:grid-cols-5 lg:gap-2 md:mt-10">
             {data?.map((item) => {
               return (
                 <>

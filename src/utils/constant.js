@@ -560,3 +560,34 @@ export const CARD_DATA = [
     img: "https://materialui.co/img/logo.svg",
   },
 ];
+
+export const COLUMN_DATA = [
+  {
+    id: 1,
+    title: "All",
+  },
+  {
+    id: 2,
+    title: "Tools",
+  },
+  {
+    id: 3,
+    title: "Typography",
+  },
+  {
+    id: 4,
+    title: "Upskilling",
+  },
+  {
+    id: 5,
+    title: "Inspiration",
+  },
+  {
+    id: 6,
+    title: "Youtube",
+  },
+  {
+    id: 7,
+    title: "Technologies",
+  },
+];

@@ -2,26 +2,19 @@
 /* eslint-disable no-undef */
 /** @type {import('tailwindcss').Config} */
 export default {
-  content: [
-    "./index.html",
-    "./src/**/*.{js,ts,jsx,tsx}",
-  ],
+  content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
     extend: {
-
       colors: {
         primary: {
-          500: "#FF5403"
+          500: "#FF5403",
         },
-        button :
-        {
-          500: "#E1DCD0"
+        button: {
+          500: "#E1DCD0",
         },
-        textbg : 
-        {
-          500 : "#878787"
-        }
-        
+        textbg: {
+          500: "#878787",
+        },
       },
       container: {
         center: true,
@@ -36,12 +29,10 @@ export default {
         },
       },
       fontFamily: {
-        'zodiak': ['Zodiak', 'serif'],
-        'panchang': ['Panchang', 'sans-serif'],
-        'satoshi': ['Satoshi', 'sans-serif'],
-        'author': ['Author', 'sans-serif']
-
-
+        zodiak: ["Zodiak", "serif"],
+        panchang: ["Panchang", "sans-serif"],
+        satoshi: ["Satoshi", "sans-serif"],
+        author: ["Author", "sans-serif"],
       },
       animation: {
         first: "moveVertical 30s ease infinite",
@@ -88,7 +79,8 @@ export default {
     },
   },
 
-  plugins: [],
+  //...
+  plugins: [require("daisyui")],
 };
 
 function addVariablesForColors({ addBase, theme }) {
