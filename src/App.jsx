@@ -1,44 +1,34 @@
+import { BrowserRouter, Route, Routes, useLocation } from "react-router-dom";
+import { useLayoutEffect } from "react";
+import { routes } from "./routes";
 
-import Home from './Components/ui/Page/Home'
-import Nav from './Components/ui/Page/Nav'
-import Details from './Components/ui/Page/Details'
-import About from './Components/ui/Page/About'
-import { createBrowserRouter,  Outlet,  RouterProvider } from 'react-router-dom';
-import './index.css'
+const Wrapper = ({ children }) => {
+  const location = useLocation();
 
-const AppLayout = () => (
-  <>
-    <Nav />
-    <Outlet />
-  </>
-);
+  useLayoutEffect(() => {
+    window.scrollTo({ top: 0, left: 0 });
+  }, [location.pathname]);
 
-const RoutingApp = createBrowserRouter([
-  {
-    path: "/",
-    element: <AppLayout />,
-    children: [
-      {
-        path: "/",
-        element: <Home />,
-      },
-      {
-        path: "/details",
-        element: <Details />
-      },
-      {
-        path: "/about",
-        element: <About/>
-      }
-    ]
-  },
-  
-])
+  return children;
+};
+
+// Map over routes and return Route components
+const getRoutes = (routes) => {
+  return routes.map((route, index) => (
+    <Route key={index} exact path={route.path} element={<route.component />} />
+  ));
+};
 
 const App = () => {
   return (
-      <RouterProvider router={RoutingApp} />
-  )
-}
+    <>
+      <BrowserRouter>
+        <Wrapper>
+          <Routes>{getRoutes(routes)}</Routes>
+        </Wrapper>
+      </BrowserRouter>
+    </>
+  );
+};
 
-export default App
+export default App;
