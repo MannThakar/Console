@@ -1,6 +1,7 @@
 /* eslint-disable no-unused-vars */
 /* eslint-disable react/prop-types */
 import "../../styles/App.css";
+import PropTypes from "prop-types";
 
 const Card = ({ title, description, link, Category, img }) => {
   return (
@@ -26,6 +27,24 @@ const Card = ({ title, description, link, Category, img }) => {
       }
     </>
   );
+};
+
+//Default Props
+Card.defaultProps = {
+  title: "Default Title",
+  description: "Default Description",
+  link: "https://github.com",
+  Category: "Default Category",
+  img: "https://picsum.photos/200",
+};
+
+//Checking PropTypes
+Card.PropTypes = {
+  title: PropTypes.string,
+  description: PropTypes.string,
+  link: PropTypes.string,
+  Category: PropTypes.string,
+  img: PropTypes.string,
 };
 
 export default Card;

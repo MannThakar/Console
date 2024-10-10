@@ -3,7 +3,7 @@
 import Card from "../components/common/Card";
 import { CARD_DATA, COLUMN_DATA } from "../utils/constant";
 import { useEffect, useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useSearchParams } from "react-router-dom";
 import { ReactLenis, useLenis } from "lenis/react";
 
 const Home = () => {
@@ -62,8 +62,6 @@ const Home = () => {
     setLimit(limit + 10);
     setRecords(data.slice(0, limit + 10));
   };
-  console.log(limit);
-  console.log(data.length);
 
   useEffect(() => {
     setRecords(data.slice(0, limit));
@@ -121,7 +119,7 @@ const Home = () => {
                       id: item.id,
                       isFromHome: true,
                     };
-                    navigate("/details", { state: navigationData });
+                    navigate(`/details`, { state: navigationData });
                   }}
                 >
                   <Card {...item} />

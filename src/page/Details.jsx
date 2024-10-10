@@ -1,11 +1,10 @@
-import { useLocation, useNavigate } from "react-router-dom";
+import { useLocation, useNavigate, useSearchParams } from "react-router-dom";
 import { useEffect } from "react";
 import { ArrowLeft, MoveRight } from "lucide-react";
 
 const Details = () => {
   const location = useLocation();
   const navigate = useNavigate();
-
   const {
     name = "Default Name",
     description = "Default Description",
