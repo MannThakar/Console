@@ -1,12 +1,12 @@
 import Details from "../page/Details";
 import About from "../page/About";
-import Layout from "../layout/Layout";
+import Home from "../page/Home";
 
 export const routes = [
   {
-    name: "Layout",
+    name: "Home",
     path: "/",
-    component: Layout,
+    component: Home,
     isPrivate: false,
   },
   {

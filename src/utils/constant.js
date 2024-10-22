@@ -566,5 +566,3 @@ export const COLUMN_DATA = [
     title: "Technologies",
   },
 ];
-
-// export const COLUMNS = COLUMN_DATA.map((column) => column.title);
