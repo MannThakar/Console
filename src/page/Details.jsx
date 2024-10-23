@@ -1,6 +1,6 @@
 import { useLocation, useNavigate } from "react-router-dom";
 import { useEffect } from "react";
-import { ArrowLeft, MoveRight } from "lucide-react";
+import { MoveRight } from "lucide-react";
 import Breadcrums from "../components/Breadcrums";
 
 const Details = () => {
