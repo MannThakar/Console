@@ -534,31 +534,6 @@ export const CARD_DATA = [
     Category: "Tools",
     img: "https://www.pillarstack.com/_next/image?url=https%3A%2F%2Fimages.ctfassets.net%2Ffwy0yv14lkat%2F3P3CDFBjLMuEtoHaEhBjjh%2F46712eac07e0ac6d3004026c9230a454%2Funsplash.webp&w=1920&q=75",
   },
-  {
-    id: 66,
-    title: "Uxcel",
-    description:
-      "Learn UX design at your own pace with guided, bite-sized education and interactive UX design courses for any role & level.",
-    link: "https://uxcel.com/",
-    Category: "Upskilling",
-    img: "https://www.pillarstack.com/_next/image?url=https%3A%2F%2Fimages.ctfassets.net%2Ffwy0yv14lkat%2F6ki8mA07aGnPri1RGb72id%2F810f59d25d5b932d9ab214d912b771a9%2Fuxcel.webp&w=1920&q=75",
-  },
-  {
-    id: 67,
-    title: "Webflow",
-    description:
-      "Create custom, responsive websites with the power of code — visually. Design and build your site with a flexible CMS and top-tier hosting.",
-    link: "https://webflow.com/",
-    Category: "Technologies",
-    img: "https://www.pillarstack.com/_next/image?url=https%3A%2F%2Fimages.ctfassets.net%2Ffwy0yv14lkat%2F4DfZEztnolgD0qDuksAiD%2F4870dad7ab833eb5a60512af533881d8%2Fwebflow.webp&w=1920&q=75",
-  },
-  {
-    id: 68,
-    title: "Material ui",
-    link: "https://materialui.co/",
-    Category: "Tools",
-    img: "https://materialui.co/img/logo.svg",
-  },
 ];
 
 export const COLUMN_DATA = [
