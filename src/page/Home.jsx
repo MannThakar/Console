@@ -5,15 +5,18 @@ import { CARD_DATA, COLUMN_DATA } from "../utils/constant";
 import { useEffect, useState } from "react";
 import { useNavigate, useSearchParams } from "react-router-dom";
 import { ReactLenis, useLenis } from "lenis/react";
+import useLocalStorage from "../hooks/useLocalStorage";
+import personIcon from ".././assets/icons/03_person_icon.png";
 
 const Home = () => {
   const navigate = useNavigate();
-
   const [data, setData] = useState(CARD_DATA);
   const [active, setActive] = useState("All");
   const [limit, setLimit] = useState(10);
   const [records, setRecords] = useState(CARD_DATA);
-
+  const { getItem, setItem } = useLocalStorage("userData");
+  const [render, setRender] = useState([]);
+  let bookmarkItem = 0;
   const filteredData = (filterItem) => {
     switch (filterItem) {
       case "Tools":
@@ -51,6 +54,14 @@ const Home = () => {
         setData(CARD_DATA);
         setActive(filterItem);
         break;
+
+      case "Favourites":
+        bookmarkItem = getItem().filter((item) => item.isBookmark === true);
+        bookmarkItem.length === 0 ? setData([]) : setData(bookmarkItem);
+        setData(bookmarkItem);
+        setActive(filterItem);
+
+        break;
     }
   };
 
@@ -65,7 +76,14 @@ const Home = () => {
 
   useEffect(() => {
     setRecords(data.slice(0, limit));
-  }, [data, limit]);
+  }, [data, limit, render]);
+
+  useEffect(() => {
+    if (getItem.length === 0 && !getItem()) {
+      setItem(CARD_DATA);
+    }
+  }, []);
+  console.log("render");
 
   return (
     <div className="bg-neutral-950">
@@ -83,7 +101,7 @@ const Home = () => {
           </div>
           <div
             role="tablist"
-            className=" mt-24 font-satoshi tabs tabs-boxed bg-gray-400 rounded-md cursor-pointer bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-10 sm:tabs-sm lg:tabs-lg xs:tabs-xs overflow-auto md:w-10/12 mx-auto"
+            className=" mt-24 font-satoshi tabs tabs-boxed bg-gray-400 rounded-md cursor-pointer bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-10 sm:tabs-sm lg:tabs-lg xs:tabs-xs overflow-auto mx-auto"
           >
             {COLUMN_DATA.map((item) => (
               <a
@@ -103,11 +121,17 @@ const Home = () => {
               </a>
             ))}
           </div>
-          <section className="grid md:grid-cols-2 grid-cols-2 lg:grid-cols-4 lg:gap-2 md:mt-10 xl:grid-cols-5">
-            {records?.map((item) => {
-              return (
+          <section
+            className={`${
+              records.length === 0
+                ? "flex items-center justify-center"
+                : "grid md:grid-cols-2 grid-cols-2 lg:grid-cols-4 lg:gap-2 md:mt-10 xl:grid-cols-5"
+            } pb-10 min-h-60`}
+          >
+            {records.length > 0 ? (
+              records.map((item) => (
                 <div
-                  className="mt-5 "
+                  className="mt-5 w-full"
                   key={item.id}
                   onClick={() => {
                     const navigationData = {
@@ -122,17 +146,19 @@ const Home = () => {
                     navigate(`/details`, { state: navigationData });
                   }}
                 >
-                  <Card {...item} />
+                  <Card {...item} setRender={setRender} />
                 </div>
-              );
-            })}
+              ))
+            ) : (
+              <p className="text-center">Uh-oh! No favorite items found.</p>
+            )}
           </section>
 
           {records.length < data.length && (
             <div className="flex justify-center mt-5 pb-10 ">
               <button
                 onClick={handleLimit}
-                className="bg-white mx-auto p-5 text-black rounded-full"
+                className="bg-white mx-auto p-5 text-black rounded-full "
               >
                 Show More
               </button>
