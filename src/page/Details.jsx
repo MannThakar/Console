@@ -1,6 +1,7 @@
-import { useLocation, useNavigate, useSearchParams } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 import { useEffect } from "react";
-import { ArrowLeft, MoveRight } from "lucide-react";
+import { MoveRight } from "lucide-react";
+import Breadcrums from "../components/Breadcrums";
 
 const Details = () => {
   const location = useLocation();
@@ -21,15 +22,10 @@ const Details = () => {
   }, [isFromHome, navigate]);
 
   return (
-    <div className="p-1 bg-neutral-950">
-      <div className="container">
-        <div className="flex mb-8 mt-11">
-          <button
-            className="flex gap-1 p-4 px-8 text-base text-white"
-            onClick={() => navigate("/")}
-          >
-            <ArrowLeft /> Back
-          </button>
+    <div className="p-1 bg-neutral-950 ">
+      <div className="container mt-7">
+        <div className="mt-8 mb-6">
+          <Breadcrums title={name} />
         </div>
         <div className="grid h-screen md:grid-cols-2 grid-cols-1">
           <div className="h-5/6">

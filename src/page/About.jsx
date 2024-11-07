@@ -1,19 +1,13 @@
 import { useNavigate } from "react-router-dom";
 import { ArrowLeft } from "lucide-react";
+import Breadcrums from "../components/Breadcrums";
 const About = () => {
   const navigate = useNavigate();
   return (
     <>
       <div className="h-screen bg-neutral-950 p-1">
         <div className="container">
-          <div className="flex mt-2 mb-8">
-            <button
-              className="flex gap-1 p-4 px-8 text-base text-white"
-              onClick={() => navigate("/")}
-            >
-              <ArrowLeft /> Back
-            </button>
-          </div>
+          <Breadcrums title="About" />
           <div className="grid grid-cols-1 mt-20 md:grid-cols-2">
             <div className="mt-4 ml-4">
               <h1 className="font-bold text-white text-8xl font-satoshi">
